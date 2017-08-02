@@ -25,10 +25,26 @@ module.exports = function(grunt) {
           dest: 'views/images/new-images'
         }]
       }
+    },
+    cssmin: {
+      options: {
+        mergeIntoShorthands: false,
+        roundingPrecision: -1
+      },
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'css/',
+          src: ['*.css', '!*.min.css'],
+          dest: 'css/',
+          ext: '.min.css'
+        }]
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-responsive-images');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-  grunt.registerTask('default', ['responsive_images']);
+  grunt.registerTask('default', ['']); // add tasks for whatever you need to do
 };
