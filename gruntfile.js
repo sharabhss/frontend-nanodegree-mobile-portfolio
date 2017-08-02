@@ -9,20 +9,23 @@ module.exports = function(grunt) {
         options: {
           sizes: [{
             width: 320,
-            name: 'small'
-          }, {
+            name: 'small',
+            quality: 50
+            }, {
             width: 640,
-            name: 'medium'
+            name: 'medium',
+            quality: 50
           }, {
             width: 800,
-            name: 'large'
+            name: 'large',
+            quality: 50
           }]
         },
         files: [{
           expand: true,
           src: ['*.{jpg,gif,png}'],
-          cwd: 'views/images',
-          dest: 'views/images/new-images'
+          cwd: 'img/',
+          dest: 'img/new-images'
         }]
       }
     },
@@ -46,5 +49,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-responsive-images');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-  grunt.registerTask('default', ['']); // add tasks for whatever you need to do
+  grunt.registerTask('default', ['responsive_images']); // add tasks for whatever you need to do
 };
