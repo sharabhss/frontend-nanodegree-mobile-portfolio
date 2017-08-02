@@ -37,9 +37,9 @@ module.exports = function(grunt) {
       target: {
         files: [{
           expand: true,
-          cwd: 'css/',
+          cwd: 'views/css/',
           src: ['*.css', '!*.min.css'],
-          dest: 'css/',
+          dest: 'views/css/',
           ext: '.min.css'
         }]
       }
@@ -49,5 +49,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-responsive-images');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-  grunt.registerTask('default', ['responsive_images']); // add tasks for whatever you need to do
+  grunt.registerTask('default', ['cssmin']); // add tasks for whatever you need to do
 };
