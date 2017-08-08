@@ -8,8 +8,8 @@ Your challenge, if you wish to accept it (and we sure hope you will), is to opti
 
 After several optimization techniques applied to index.html, the PageSpeed Insights score for the page ended up being 92 on both mobile and desktop. The techniques used are described below.
 
-(img/index-pagespeed-mobile.png)
-(img/index-pagespeed-desktop.png)
+![PageSpeed Mobile](img/index-pagespeed-mobile.PNG)
+![PageSpeed Desktop](img/index-pagespeed-desktop.PNG)
 
 Optimizations:
 * Minify style.css and inline it inside index.html
