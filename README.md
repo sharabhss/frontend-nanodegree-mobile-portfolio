@@ -4,39 +4,26 @@
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
-To get started, check out the repository and inspect the code.
-
-### Getting started
-
 #### Part 1: Optimize PageSpeed Insights score for index.html
 
-Some useful tips to help you get started:
+After several optimization techniques applied to index.html, the PageSpeed Insights score for the page ended up being 92 on both mobile and desktop. The techniques used are described below.
 
-1. Check out the repository
-1. To inspect the site on your phone, you can run a local server
+(img/index-pagespeed-mobile.png)
+(img/index-pagespeed-desktop.png)
 
-  ```bash
-  $> cd /path/to/your-project-folder
-  $> python -m SimpleHTTPServer 8080
-  ```
-
-1. Open a browser and visit localhost:8080
-1. Download and install [ngrok](https://ngrok.com/) to the top-level of your project directory to make your local server accessible remotely.
-
-  ``` bash
-  $> cd /path/to/your-project-folder
-  $> ./ngrok http 8080
-  ```
-
-1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! Optional: [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
-
-Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
+Optimizations:
+* Minify style.css and inline it inside index.html
+* Add async load and minify js/perfmatters.js
+* Add async load to Google Analytics script
+* Compress each image included inside index.html
 
 #### Part 2: Optimize Frames per Second in pizza.html
 
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
-
-You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
+To remove jank from pizza animation in pizza.html, several optimization were made to js/main.js to achieve a desired load time and fps. Some of the steps taken were as follows:
+* Use "getElementById" and "getElementsByClassName" instead of "querySelectorAll"
+* Remove "determineDx" function as it was not needed and the part inside of it that was needed could be combined into the "changePizzaSizes" function
+* Several variables that were initially declared inside of for loops were taken outside for faster response
+* When adding pizzas to the document, made the number of pizzas added more calculated using the width of hte viewport rather than an arbitary contant that was in place initially
 
 ### Optimization Tips and Tricks
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
