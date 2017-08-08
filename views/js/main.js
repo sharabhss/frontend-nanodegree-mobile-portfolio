@@ -296,10 +296,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
   //NOTE: Optimized the number of pizzas depending on the size of viewport rather than an abritary 200 number given as default
-  var columns = Math.ceil(window.innerWidth / s);
   var rows = Math.ceil(window.innerHeight / s);
-  var numPizzas = columns * rows;
-  cols = columns;
+  var numPizzas = cols * rows;
   // NOTE: Initialized variables outside the loor for consitency and no repitition
   var elem;
   var movingPizzas1 = document.getElementById('movingPizzas1');
