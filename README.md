@@ -25,6 +25,8 @@ To remove jank from pizza animation in pizza.html, several optimization were mad
 * Several variables that were initially declared inside of for loops were taken outside for faster response
 * When adding pizzas to the document, made the number of pizzas added more calculated using the width of hte viewport rather than an arbitary contant that was in place initially
 
+![DevTools](img/devtools-pizza.PNG)
+
 ### Optimization Tips and Tricks
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
 * [Analyzing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html "analyzing crp")
