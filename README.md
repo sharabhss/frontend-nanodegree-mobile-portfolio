@@ -4,6 +4,15 @@
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
+#### Setting up and running the application
+
+Follow the steps below to set up and run the application once the repo has been cloned or a zip has been downloaded.
+
+* Open folder "frontend-nanodegree-mobile-portfolio-master" inside the zip or from cloned directory
+* Inside, "index.html" is the main home page where PageSpeed Insights optimizations need to be made. You can edit this film using a text editor like Sublime or Atom
+* For Pizza optimization, open folder "views" followed by folder "js" and inside there is a JavaScript file "main.js", which is where the changes need to be made for optimization
+* To check these optimizations, open "pizza.html" from "views" folder on a web browser like Google Chrome and use its development tools to check if desired changes were made
+
 #### Part 1: Optimize PageSpeed Insights score for index.html
 
 After several optimization techniques applied to index.html, the PageSpeed Insights score for the page ended up being 92 on both mobile and desktop. The techniques used are described below.
